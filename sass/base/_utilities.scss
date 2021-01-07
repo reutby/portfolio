@@ -1,26 +1,58 @@
+.u-center-text {
+    text-align: center !important;
+}
 
-.u-center-text{text-align: center !important;}
-.u-margin-bottom-big{margin-bottom: 6rem;}
-.u-margin-top-big{margin-top: 6rem;}
+.u-margin-bottom-big {
+    margin-bottom: 6rem;
+}
 
-.u-empty-col{
+.u-margin-top-big {
+    margin-top: 6rem;
+}
+
+.u-empty-col {
     width: 100%;
     visibility: hidden;
 }
 
-.u-font-size-small{
+.u-move-up-medium{
+    position: relative;
+    top: -10rem;
+}
+
+.u-move-up-big{
+    position: relative;
+    top: -18rem;
+}
+
+.u-break-between-sections {
+
+    border: 0;
+    height: 0;
+    /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+
+}
+
+.u-break-between-sections:after {
+    /* Not really supposed to work, but does */
+    content: "\00a0";
+    /* Prevent margin collapse */
+}
+
+.u-font-size-small {
     font-size: 3rem;
     text-align: center;
 
 }
 
-.u-font-size-medium{
+.u-font-size-medium {
     font-size: 4rem;
     text-align: center;
 }
 
-.u-font-size-big{
+.u-font-size-big {
     font-size: 5rem;
     text-align: center;
-    
+
 }

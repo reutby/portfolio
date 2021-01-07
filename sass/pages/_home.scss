@@ -1,15 +1,16 @@
 
 .section-about {
-    height: auto;
+    height: 100vh;
     // background-color: rgba(#433d3c,.7);
     background-image: $color-white;
     position: relative;
+    padding-top: 10rem;
 
     &__content {
         box-shadow: 0 1rem 3rem rgba($color-black, .8);
         width: 80%;
         height: auto;
-        margin: 5% auto;
+        margin: 0 auto;
         padding: 2rem;
     }
 
@@ -28,8 +29,13 @@
 
 .section-skills {
     position: relative;
-    height: 120vh;
+    height: auto;
+    padding-bottom: 10rem;
     background-color: #f5f4f4;
 }
 
-@media (max-width: 700px) {}
+@media (max-width: 700px) {
+    .section-about{
+        height: auto;
+    }
+}
