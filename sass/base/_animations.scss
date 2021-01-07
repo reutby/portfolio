@@ -1,0 +1,27 @@
+@keyframes moveInCenter {
+
+    0% {
+        opacity: 0;
+        transform: scale(.2);
+    }
+
+
+    100% {
+        opacity: .8;
+        transform: scale(1);
+    }
+}
+
+@keyframes moveInsideFromLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

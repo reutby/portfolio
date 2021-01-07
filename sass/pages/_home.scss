@@ -1,0 +1,35 @@
+
+.section-about {
+    height: auto;
+    // background-color: rgba(#433d3c,.7);
+    background-image: $color-white;
+    position: relative;
+
+    &__content {
+        box-shadow: 0 1rem 3rem rgba($color-black, .8);
+        width: 80%;
+        height: auto;
+        margin: 5% auto;
+        padding: 2rem;
+    }
+
+    &__text {
+        padding-bottom: 2rem;
+    }
+
+    &:target {
+        transition: all 1 ease-in;
+        // clear: both;
+        animation-name: moveInsideFromLeft;
+        animation-duration: 1s;
+
+    }
+}
+
+.section-skills {
+    position: relative;
+    height: 120vh;
+    background-color: #f5f4f4;
+}
+
+@media (max-width: 700px) {}

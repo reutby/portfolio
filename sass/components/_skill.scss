@@ -1,0 +1,29 @@
+.skill{
+    width:20rem;
+    height:20rem;
+    // border: 2px solid $color-primary-pink;
+    // position: relative;
+    transform: rotate(45deg);
+    background-color: white;
+    box-shadow: 0 1rem 2rem $color-black;
+    
+    &__shape{
+        transform: rotate(-45deg) ;
+        position: relative;
+        padding: 2rem;
+        width: 20rem;
+        height: 20rem;
+    }
+    &__text{
+        text-align: center;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 700;
+        padding-top: 1rem;
+        color: #433d3c;
+    }
+
+    &__img{
+      padding:1rem;
+    }
+}

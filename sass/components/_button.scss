@@ -1,0 +1,48 @@
+.btn{
+
+    & .arrow-down{
+        opacity: 0;
+      display:none;  
+      visibility: hidden;
+    }
+
+    animation:moveInCenter .4s 1.6s;
+    animation-fill-mode: both;
+    left: 25%;
+    width:50%;    
+    border: 2px solid $color-white;
+    &:link,
+    &:visited{
+        text-decoration: none;
+        font-size: 3rem;
+        font-weight: 700;
+        color:$color-white;
+        // display: block;
+        text-align: center;
+        padding:1rem;
+        margin: 0 auto;
+        text-transform: uppercase;
+        // border-radius: 3rem;
+        position: relative;
+        display: inline-block;
+        // transform: translateX(-50%);
+    }
+    &:active,
+    &:hover{
+
+        & .arrow-right{
+            opacity: 0;
+            display:none;  
+            visibility: hidden;
+          
+        }
+        & .arrow-down{
+            visibility: visible;
+            display: inline;
+            opacity: 1;
+        }
+        background-color:$color-white;
+        color:$color-primary-purple;
+    }
+
+}
