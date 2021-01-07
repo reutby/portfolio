@@ -1,5 +1,9 @@
 .navigation {
-   position: relative; 
+   position: fixed;
+   top:0;
+   left: 0;
+   z-index: 3000;
+   width: 100%; 
     &__checkbox {
         display: none;
         visibility: hidden;
@@ -10,7 +14,7 @@
         // position: relative;
         height: 6rem;
         width: 100%;
-        background-color: rgba(#433d3c, .6);
+        background-color: rgba(#f1f1f1, .6);
         padding-top: .5rem;
         margin: 0;
         box-shadow: 0 2rem 3rem rgba($color-black, .2);
