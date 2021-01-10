@@ -42,7 +42,38 @@
             opacity: 1;
         }
         background-color:$color-white;
-        color:$color-primary-purple;
+        color:$color-primary-green;
     }
 
+}
+
+.button-secondary{
+    
+    color: $color-primary-blue;
+    background-color: $color-primary-green;
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    &--position1{
+        position: absolute;
+    bottom: 0;
+    right: 1rem;
+    }
+    &--position2{
+       @include absCenter;
+    }
+    
+
+    &:link,
+    &:visited{
+        text-decoration: none;
+    }
+    &:hover{
+            // text-decoration: underline;
+        color: $color-white;
+    }
 }
