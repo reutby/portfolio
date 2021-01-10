@@ -1,7 +1,7 @@
 .skill{
     width:20rem;
     height:20rem;
-    // border: 2px solid $color-primary-pink;
+    // border: 2px solid $color-primary-blue;
     // position: relative;
     transform: rotate(45deg);
     background-color: white;
@@ -25,5 +25,20 @@
 
     &__img{
       padding:1rem;
+    }
+}
+
+.skills{
+    background-color: $color-primary-blue;
+}
+@media(max-width:767px){
+    .skill{
+        transform: scale(0.8) rotate(45deg);
+        margin:0 auto ;
+    }
+
+    .skills{
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }
