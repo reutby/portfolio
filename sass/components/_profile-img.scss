@@ -9,7 +9,7 @@
         position: relative;
         width: 100%;
         box-shadow: 0 1rem 3rem $color-black; 
-        
+        // transform: skew(10deg);
         display:inline-block;
         border-radius: 50%;
     
@@ -17,5 +17,8 @@
 }
 
 @media(max-width:700px){
-    
+    .profile-img{
+        width:20rem;
+        height: 20rem;
+    }
 }
