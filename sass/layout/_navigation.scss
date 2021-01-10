@@ -14,7 +14,7 @@
         // position: relative;
         height: 6rem;
         width: 100%;
-        background-color: rgba(#f1f1f1, .6);
+        background-color:rgba($color-black, .8);
         padding-top: .5rem;
         margin: 0;
         box-shadow: 0 2rem 3rem rgba($color-black, .2);
@@ -48,14 +48,15 @@
         &:link,
         &:visited {
             text-decoration: none;
-
+            color: $color-primary-green;
         }
 
         &:hover,
         &:active {
-            border-bottom: 2px solid $color-primary-pink;
-            color: $color-primary-pink;
+            border-bottom: 2px solid $color-primary-blue;
+            color: $color-primary-blue;
             transform: rotate(10deg) scale(1.2);
+            background-color: rgba($color-white,.6);
 
         }
 
@@ -73,7 +74,7 @@
         position: absolute;
         visibility: hidden;
         display: block;
-        border: 2px solid $color-primary-purple;
+        border: 2px solid $color-primary-green;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
@@ -89,8 +90,8 @@
 
         &__list {
             // display: none;
-            visibility: hidden;
-
+            opacity: 0;
+            transition: all .2s;
         }
 
         &__button {
@@ -98,18 +99,16 @@
         }
 
         &__checkbox:checked~&__list {
-            visibility: visible;
+            opacity: 1;
             flex-flow: column;
-            background-color: $color-white;
+            background-color: rgba($color-black,.8);
             z-index: 2000;
             width: 100%;
             align-items: center;
             height: 20rem;
         }
 
-        &__checkbox:checked~&__list>&__item {
-            visibility: visible;
-        }
+        
 
         &__icon {
             position: relative;
@@ -118,7 +117,7 @@
             &,
             &::before,
             &::after {
-                border-bottom: solid 2px $color-primary-purple;
+                border-bottom: solid 2px $color-primary-green;
                 top: 1.6rem;
                 width: 3rem;
                 height: 3px;
