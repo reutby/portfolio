@@ -3,13 +3,48 @@
 }
 
 .u-margin-bottom-big {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
 }
 
 .u-margin-top-big {
-    margin-top: 6rem;
+    margin-top: 8rem;
 }
 
+
+.u-left-medium{
+    position: relative;
+    left: -6rem;
+}
+
+.u-left-big{
+    position: relative;
+    left: -32rem;
+}
+
+
+
+.u-right-medium{
+    position: relative;
+    left: 6rem;
+}
+@media(max-width:1000px){
+    .u-left-medium,
+    .u-left-big,
+    .u-right-medium
+    {
+        // position: relative;
+        left: 0;
+    }
+    
+}
+
+.u-skew-10deg-right{
+    transform: skew(10deg);
+}
+
+.u-skew-10deg-left{
+    transform: skew(-10deg);
+}
 .u-empty-col {
     width: 100%;
     visibility: hidden;
@@ -25,21 +60,9 @@
     top: -18rem;
 }
 
-.u-break-between-sections {
-
-    border: 0;
-    height: 0;
-    /* Firefox... */
-    box-shadow: 0 0 10px 1px black;
-
+.u-box-shadow{
+    box-shadow: 0 1rem 3rem rgba($color-black, .8);
 }
-
-.u-break-between-sections:after {
-    /* Not really supposed to work, but does */
-    content: "\00a0";
-    /* Prevent margin collapse */
-}
-
 .u-font-size-small {
     font-size: 3rem;
     text-align: center;
