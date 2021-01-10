@@ -1,0 +1,11 @@
+.footer{
+    height:20rem;
+    width: 100%;
+    background-color: $color-primary-green;
+
+    &__text {
+        font-size: 2rem;
+        color: $color-white;
+       text-align: center;
+    }
+}
