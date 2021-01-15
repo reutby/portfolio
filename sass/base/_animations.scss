@@ -12,6 +12,19 @@
     }
 }
 
+@keyframes percentageAnimation{
+    0% {
+        
+        background-image: linear-gradient(to left, transparent 0%,transparent 100%,rgba($color-green-light,.8) 100%);
+       
+    }
+    
+    100% {
+        
+        background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 10%);
+        
+    }
+}
 @keyframes moveInsideFromLeft {
 
     0% {
