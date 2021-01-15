@@ -10,7 +10,7 @@
     &__shape{
         transform: rotate(-45deg) ;
         position: relative;
-        padding: 2rem;
+        padding: 2.5rem;
         width: 20rem;
         height: 20rem;
     }
@@ -24,14 +24,14 @@
     }
 
     &__img{
-      padding:1rem;
+      padding-bottom:1rem;
     }
 }
 
 .skills{
     background-color: $color-primary-blue;
 }
-@media(max-width:767px){
+@media(max-width:1000px){
     .skill{
         transform: scale(0.8) rotate(45deg);
         margin:0 auto ;

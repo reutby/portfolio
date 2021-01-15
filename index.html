@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,100&display=swap"
-        rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Quicksand:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="assets/img/favicon.ico">
     <link rel="stylesheet" href="css/icon-font.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
@@ -24,8 +27,8 @@
     <header class="header">
         <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
-                <source src="img/Time Lapse Video Of Aurora Borealis.mp4" type="video/mp4" />
-                <source src="img/header-bg.mp4" type="video/webm" />
+                <source src="assets/img/header-bg.mp4" type="video/mp4" />
+                <source src="assets/img/header-bg.mp4" type="video/webm" />
                 Your browser os not supported!
 
             </video>
@@ -44,33 +47,35 @@
                 </span></a>
         </div>
     </header>
-    <section class="section-about" id="section-about">
-
-        <div class="navigation">
-            <div class="navigation__nav">
-                <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-                <label for="navi-toggle" class="navigation__button">
-                    <span class="navigation__icon">&nbsp;</span>
-                </label>
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
-                    <li class="navigation__item"><a href="#section-skills" class="navigation__link">Skills</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Projects</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
-                </ul>
-            </div>
+    <div class="navigation flex-position">
+        <div class="navigation__nav">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#section-skills" class="navigation__link">Skills</a></li>
+                <li class="navigation__item"><a href="#section-projects" class="navigation__link">Projects</a></li>
+                <li class="navigation__item"><a href="#section-contact-me" class="navigation__link">Contact</a></li>
+            </ul>
         </div>
+    </div>
+    <section class="section-about u-hide-me" id="section-about">
+
+
         <div class="section-about__content u-box-shadow u-skew-10deg-left">
             <h2 class="secondary-heading u-skew-10deg-right"> About Me</h2>
 
             <div class="profile-img">
 
-                <img src="img/profile-img.jpeg" alt="" class="profile-img__img">
+                <img src="assets/img/profile-img.jpeg" alt="" class="profile-img__img">
 
             </div>
             <div class="section-about__text u-skew-10deg-right">
+                <!-- <h3 class="heading-tertiary ">How am i?</h3> -->
                 <p class="paragraph">
-                    Hello and Welcome! <br>
+                    <span class="u-weight-big u-under-line u-font-size-medium">Hello and Welcome!</span> <br>
                     I'm excited to see you here! <br>
                     My name is Reut and i'm a web developer. <br>
                     I'm Looking for my first challenge as a full-stack/front-end/back-end developer.<br>
@@ -78,10 +83,11 @@
                     I'm highly motivated, Looking for a chance to prove my skills.<br>
                     A very quick learner, love challenges, love learning a team player and a people person :). </p>
 
-                </div>
-                <div class="section-about__download-cv">
-                    <a href="/img/Reut_BarYaacov_CV.PDF" download="Reut_Bar_Yaccov_CV" class="button-secondary button-secondary--position2">Download My CV</a>
-                </div>
+            </div>
+            <div class="section-about__download-cv">
+                <a href="/assets/CV_ReutBarYaacov_FullStackDeveloper.pdf" download="Reut_Bar_Yaccov_CV"
+                    class="button-secondary button-secondary--position2">Download Resume</a>
+            </div>
 
         </div>
     </section>
@@ -99,12 +105,12 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section class="section-skills" id="section-skills">
+    <section class="section-skills u-hide-me" id="section-skills">
         <div class="container">
             <h2 class="secondary-heading u-margin-top-big"> Skills</h2>
             <div class="row ">
                 <div class=" u-left-medium col-lg-6 col-md-12">
-                    <h3 class="heading-tertiary  u-margin-top-big u-margin-bottom-big"> Front-end technologies</h3>
+                    <h3 class="heading-tertiary  u-margin-top-medium u-margin-bottom-big"> Front-end technologies</h3>
                     <div class="row skills u-box-shadow">
                         <div class="col-lg-4 col-md-4 u-center-text ">
 
@@ -165,7 +171,7 @@ color: rgb(130, 214, 62);
                     </div>
                 </div>
                 <div class="u-right-medium col-lg-6 col-md-12 ">
-                    <h3 class="heading-tertiary u-margin-top-big u-margin-bottom-big">Back-end technologies</h3>
+                    <h3 class="heading-tertiary u-margin-top-medium u-margin-bottom-big">Back-end technologies</h3>
                     <div class="row skills u-box-shadow">
                         <div class="col-lg-4 col-md-4   u-center-text">
 
@@ -173,7 +179,7 @@ color: rgb(130, 214, 62);
                                 <div class="skill__shape">
                                     <div class="skill__text">
                                         <div class="skill__text">
-                                            <p>HTML5, CSS3 & SASS</p>
+                                            <p>mongoDB & mongoos</p>
                                         </div>
                                     </div>
 
@@ -194,7 +200,7 @@ color: rgb(130, 214, 62);
                                 <div class="skill__shape">
                                     <div class="skill__text">
                                         <div class="skill__text">
-                                            <p>jQuery & Bootstrap</p>
+                                            <p>Node.js & Express</p>
                                         </div>
                                     </div>
                                     <div class="skill__img">
@@ -210,7 +216,7 @@ color: rgb(130, 214, 62);
                             <div class="skill ">
                                 <div class="skill__shape">
                                     <div class="skill__text">
-                                        <p>React, Redux & Firebase</p>
+                                        <p>Rest API & Authentication</p>
                                     </div>
                                     <div class="skill__img">
                                         <span class="iconify u-font-size-big" data-icon="logos:redux"
@@ -281,7 +287,7 @@ color: rgb(130, 214, 62);
         </div>
     </section>
 
-  
+
     <hr style="height: 6px;
 color: rgb(130, 214, 62);
  width: 60%;
@@ -295,7 +301,7 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section class="section-projects">
+    <section class="section-projects u-hide-me" id="section-projects">
         <div class="container">
             <div class="projects">
                 <h2 class="secondary-heading u-margin-top-big"> Projects</h2>
@@ -304,40 +310,43 @@ color: rgb(130, 214, 62);
                         <div class="projects__item__content u-box-shadow">
                             <h3 class="projects__item__title">Burger Builder</h3>
                             <div class="projects__item__image-container ">
-                                <img src="img/burger-builder.png" alt="" class="projects__item__image">
+                                <img src="assets/img/burger-builder.png" alt="" class="projects__item__image">
                             </div>
                             <p class="projects__item__summary">
-                                <span class="summary-header">Summary:</span> A Single page React application - Building
-                                a testy burger for authenticate users.
-                                Using the following technologies: React, Routeing, Axios, Redux & FireBase
+                                <span class="summary-header">Summary:</span> A SPA - Building a testy burger for
+                                authenticate users.
+                                Technologies: React, Routeing, Axios, Redux & FireBase
                                 DB.
                             </p>
-                            <a href="https://my-burger-app-36539.firebaseapp.com/" class="button-secondary button-secondary--position1">go to
+                            <a href="https://my-burger-app-36539.firebaseapp.com/"
+                                class="button-secondary button-secondary--position1">go to
                                 app &rarr;</a>
                         </div>
                     </li>
+
                     <li class="projects__item">
                         <div class="projects__item__content u-box-shadow">
                             <h3 class="projects__item__title">Netflix Clone</h3>
                             <div class="projects__item__image-container ">
-                                <img src="img/burger-builder.png" alt="" class="projects__item__image">
+                                <img src="assets/img/netflix-clone.png" alt="" class="projects__item__image">
                             </div>
                             <p class="projects__item__summary">
-                                <span class="summary-header">Summary:</span> A Single page React application - Building
-                                a testy burger for authenticate users.
-                                Using the following technologies: React, Routeing, Axios, Redux & FireBase
-                                DB.
+                                <span class="summary-header">Summary:</span> A SPA - Netflix clone.
+                                Technologies: React, Context API, FirebaseDB & Auth, Compound Component design pattern,
+                                style-Component.
                             </p>
-                            <a href="https://my-burger-app-36539.firebaseapp.com/" class="button-secondary button-secondary--position1">go to
+                            <a href="https://netflix-clone-69fb7.web.app/"
+                                class="button-secondary button-secondary--position1">go to
                                 app &rarr;</a>
                         </div>
                     </li>
+
                 </ul>
             </div>
         </div>
     </section>
 
- 
+
     <hr style="height: 6px;
 color: rgb(130, 214, 62);
  width: 60%;
@@ -353,6 +362,22 @@ color: rgb(130, 214, 62);
   ">
     <section class="section-contact-me">
         <h2 class="secondary-heading u-margin-top-big"> Contact Me</h2>
+        <h3 class="heading-tertiary">Have a question or want to work together?</h3>
+        <form action="https://formspree.io/f/xknpkazq" method="POST" id="contact-form" class="contact-form">
+            <div class="contact-form__content">
+                <input type="text" class="contact-form__input contact-form__input--top" autocomplete="off"
+                    placeholder="Name" id="name" name="name" required>
+                <label for="name" class="contact-form__label"></label>
+                <input type="email" class="contact-form__input" autocomplete="off" placeholder="Enter Email" id="email" required
+                    name="email">
+                <label for="email" class="contact-form__label"></label>
+                <textarea class="contact-form__message" name="message" id="" cols="30" rows="5" required></textarea>
+                <button class="button-secondary contact-form__submit" type=”submit”>Submit</button>
+                <h3 class="heading-tertiary u-display-hidden " id = "success-message"> Your message was sent successfully. Thanks!</h3>
+                <h3 class="heading-tertiary u-display-hidden " id = "failed-message" style="color:red;"> Your message was sent successfully. Thanks!</h3>
+            </div>
+
+        </form>
     </section>
 
 
@@ -366,10 +391,27 @@ color: rgb(130, 214, 62);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="index.js" type="text/javascript"></script>
     <footer class="footer">
+        <div class="social-network">
+            <ul class="social-network__list">
+
+                <li class="social-network__item"><a href="https://www.linkedin.com/in/reutby/"
+                        class="social-network__link"><span class="iconify social-network__icon"
+                            data-icon="ant-design:linkedin-filled" data-inline="false"></span></a></li>
+                <li class="social-network__item"><a href="https://github.com/reutby" class="social-network__link"><span
+                            class="iconify social-network__icon" data-icon="codicon:github-inverted"
+                            data-inline="false"></span></a></li>
+                <li class="social-network__item"><a href="https://www.facebook.com/reut.yaacov"
+                        class="social-network__link"><span class="iconify social-network__icon"
+                            data-icon="ei:sc-facebook" data-inline="false"></span></a></li>
+
+            </ul>
+        </div>
         <div class="footer__text">
-            <h1>Reut Bar Yaacov</h1>
+            <p>Reut Bar Yaacov ©2021</p>
 
         </div>
     </footer>

@@ -1,11 +1,13 @@
 .footer{
     height:20rem;
     width: 100%;
-    background-color: $color-primary-green;
+    background-color: $color-grey-light-1;
 
     &__text {
-        font-size: 2rem;
-        color: $color-white;
+        font-size: 1.5rem;
+        margin-top: 5rem;
+        color: $color-grey-dark;
        text-align: center;
+       text-transform: uppercase;
     }
 }

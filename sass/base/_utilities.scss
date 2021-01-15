@@ -10,6 +10,10 @@
     margin-top: 8rem;
 }
 
+.u-margin-top-medium {
+    margin-top: 4rem;
+}
+
 
 .u-left-medium{
     position: relative;
@@ -64,18 +68,39 @@
     box-shadow: 0 1rem 3rem rgba($color-black, .8);
 }
 .u-font-size-small {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 
 }
 
 .u-font-size-medium {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
 }
 
 .u-font-size-big {
-    font-size: 5rem;
+    font-size: 4rem;
     text-align: center;
 
+}
+
+
+.u-weight-big
+{
+    font-weight: 700;
+} 
+.u-under-line{
+    text-decoration: underline;
+}
+.u-hide-me{
+    opacity: 0;
+}
+
+.u-in-view{
+    opacity: 1;
+}
+
+.u-display-hidden{
+    position: absolute;
+    visibility: hidden;
 }

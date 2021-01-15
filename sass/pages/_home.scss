@@ -2,19 +2,23 @@
 .section-about {
     height: auto;
     position: relative;
-    padding-top: 10rem;
     padding-bottom: 5rem;
+    padding-top: 10rem;
     &__content {
         background-color: $color-primary-blue;
-        width: 80%;
+        border-radius: 10px;
+        width: 60%;
         height: auto;
         margin: 0 auto;
         padding: 2rem;
     }
 
     &__download-cv{
-       position: relative;
-       height: 7rem;
+       margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
     &__text {
         padding-bottom: 2rem;
@@ -34,10 +38,13 @@
     position: relative;
     height: auto;
     padding-bottom: 10rem;
+    transition: all 3s ease-in;
 }
 
 .section-projects{
     height: auto;
+    transition: all 3s ease-in;
+
 }
 @media (max-width: 700px) {
     .section-about{

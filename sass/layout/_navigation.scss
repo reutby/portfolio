@@ -1,8 +1,5 @@
 .navigation {
-   position: fixed;
-   top:0;
-   left: 0;
-   z-index: 3000;
+   z-index: 5000;
    width: 100%; 
     &__checkbox {
         display: none;
@@ -48,7 +45,7 @@
         &:link,
         &:visited {
             text-decoration: none;
-            color: $color-primary-green;
+            color: $color-green-light;
         }
 
         &:hover,
@@ -74,7 +71,7 @@
         position: absolute;
         visibility: hidden;
         display: block;
-        border: 2px solid $color-primary-green;
+        border: 2px solid $color-green-light;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         text-align: center;
         cursor: pointer;
@@ -83,6 +80,22 @@
 
     //icon
 
+}
+
+.flex-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fixed-position {
+    bottom: inherit;
+    left: 0;
+    position: fixed;
+    top: 0;
+}
+
+.navigation-animation{
+    animation: moveTopToBottom 2s;
 }
 
 @media (max-width:700px) {
@@ -117,7 +130,7 @@
             &,
             &::before,
             &::after {
-                border-bottom: solid 2px $color-primary-green;
+                border-bottom: solid 2px $color-green-light;
                 top: 1.6rem;
                 width: 3rem;
                 height: 3px;
@@ -164,7 +177,6 @@
         }
     }
 
-
-
+    
 
 }
