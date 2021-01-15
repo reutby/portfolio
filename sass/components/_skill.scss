@@ -1,44 +1,114 @@
 .skill{
-    width:20rem;
-    height:20rem;
-    // border: 2px solid $color-primary-blue;
-    // position: relative;
-    transform: rotate(45deg);
-    background-color: white;
-    box-shadow: 0 1rem 2rem $color-black;
-    
-    &__shape{
-        transform: rotate(-45deg) ;
-        position: relative;
-        padding: 2.5rem;
-        width: 20rem;
-        height: 20rem;
+
+    &__group{
+        margin: 0 auto;
+        width: 55rem;
+       
     }
-    &__text{
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:2rem ;
+        background-color: $color-primary-blue;
+        border-radius: 5px;
+        box-shadow: 0rem 1rem 2rem rgba($color-black,.8);
+           
+    }
+
+    &__item{
+        width: 50rem;
+        display: flex;
+        flex-direction: row;
+        @media(max-width: 600px){
+            width: 30rem;
+        }
+    }
+    &__content{
+
+        display: flex;
+        & p{
+            margin-bottom:0;
+        }
+        position: relative;
+        width: 100%;
+        background-color: $color-white;
+        background-image: linear-gradient(to left, transparent 0%,transparent 100%,rgba($color-green-light,.8) 100%);
         text-align: center;
-        position: relative;
+        padding: 1rem;
+        transition: all .3s;
+        @include clearfix;
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+        &:hover{
+        //    animation:percentageAnimation .8s;
+            transform: scale(1.1);
+
+        }
+        &--60{
+            &:hover{
+                background-image: linear-gradient(to left, transparent 0%,transparent 40%,rgba($color-green-light,.8) 40%);
+            }
+        }
+        &--70{
+            &:hover{
+                background-image: linear-gradient(to left, transparent 0%,transparent 30%,rgba($color-green-light,.8) 30%);
+            }
+        }
+
+        &--80{
+            &:hover{
+                
+                background-image: linear-gradient(to left, transparent 0%,transparent 20%,rgba($color-green-light,.8) 20%);
+                
+            }
+        }
+
+        &--90{
+            &:hover{
+                
+                background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 10%);
+               
+            }
+        }
+        
+
+    }
+
+    &__experience{
         font-size: 2rem;
-        font-weight: 700;
-        padding-top: 1rem;
-        color: #433d3c;
+        display: flex;
+        padding-left: 2rem;
+        padding-top:2rem ;
+        color:$color-white;
+        & p{
+            margin-bottom:0;
+        }
+
     }
 
-    &__img{
-      padding-bottom:1rem;
+    &__text{
+        font-size: 2rem;
+        padding-top:1rem ;
+        display: inline-block;
+        position: absolute;
+        right: 1rem;
+        @media(max-width: 600px){
+            float: none;
+        }
+        // height: auto;
+       
     }
-}
 
-.skills{
-    background-color: $color-primary-blue;
-}
-@media(max-width:1000px){
-    .skill{
-        transform: scale(0.8) rotate(45deg);
-        margin:0 auto ;
-    }
-
-    .skills{
-        margin-left: 3rem;
-        margin-right: 3rem;
+    &__images{
+        float: left;
+        margin-right: 1rem;
+        font-size: 3rem;
+        @media(max-width: 600px){
+            float: none;
+        }
     }
 }
