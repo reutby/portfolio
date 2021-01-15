@@ -1,0 +1,65 @@
+.contact-form{
+    
+    &__content{
+        width: 40rem;
+        outline-offset: 2rem;
+        outline: 1.5rem solid $color-green-light;
+        box-shadow: 0 1.5rem 4rem rgba($color-black,.4);
+        // border: 4px solid $color-green-light;
+        border-radius: 5px;
+        align-items: left;
+        // justify-content: center;
+        margin: 10rem auto;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    &__label{
+        display: hidden;
+    }
+    &__input{
+        transition: all .5s;
+        display: flex;
+        font-size: 2rem;
+        margin-bottom: .3rem;
+        &--top{
+            border-radius: 5px 5px 0 0;
+        }
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black,.1);
+            border-bottom: 3px solid $color-green-light;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid orange;
+        }
+
+    }
+    &__message{
+        font-size: 2rem;
+    }
+
+    &__submit{
+        border-radius: 0 0 5px 5px;
+        margin-bottom: 0;
+    }
+}
+
+.message-visible{
+    position: relative;
+    visibility: visible;
+}
+
+
+
+@media(max-width:900px){
+    .contact-form{
+    
+        &__content{
+            width: 30rem;
+        }
+    }
+     
+}
