@@ -444,7 +444,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  transition: all .5s;
+  transition: transform background-color color .5s;
   display: inline-block; }
   .button-secondary--position1 {
     position: absolute;
@@ -504,6 +504,7 @@ body {
 
 .skill__content {
   display: flex;
+  border-radius: 5px;
   position: relative;
   width: 100%;
   background-color: #fff;
@@ -522,13 +523,13 @@ body {
   .skill__content:hover {
     transform: scale(1.1); }
   .skill__content--60:hover {
-    background-image: linear-gradient(to left, transparent 0%, transparent 40%, rgba(115, 194, 51, 0.8) 40%); }
+    background-image: linear-gradient(to left, transparent 0%, transparent 40%, rgba(115, 194, 51, 0.8) 50%); }
   .skill__content--70:hover {
-    background-image: linear-gradient(to left, transparent 0%, transparent 30%, rgba(115, 194, 51, 0.8) 30%); }
+    background-image: linear-gradient(to left, transparent 0%, transparent 30%, rgba(115, 194, 51, 0.8) 40%); }
   .skill__content--80:hover {
-    background-image: linear-gradient(to left, transparent 0%, transparent 20%, rgba(115, 194, 51, 0.8) 20%); }
+    background-image: linear-gradient(to left, transparent 0%, transparent 20%, rgba(115, 194, 51, 0.8) 30%); }
   .skill__content--90:hover {
-    background-image: linear-gradient(to left, transparent 0%, transparent 10%, rgba(115, 194, 51, 0.8) 10%); }
+    background-image: linear-gradient(to left, transparent 0%, transparent 10%, rgba(115, 194, 51, 0.8) 20%); }
 
 .skill__experience {
   font-size: 2rem;
@@ -557,66 +558,73 @@ body {
     .skill__images {
       float: none; } }
 
-.projects {
-  width: 100%;
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: auto;
+  margin: 2rem auto;
+  align-items: center;
+  justify-content: center; }
+
+.projects__group {
+  display: flex;
+  flex-direction: row;
   position: relative;
-  height: auto; }
-  .projects__list {
-    display: block;
-    list-style: none;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center; }
-    .projects__list::after {
-      content: "";
-      display: table;
-      clear: both; }
-  .projects__item {
-    margin: 2rem;
-    width: 45%;
-    position: relative;
-    float: left; }
-    .projects__item__content {
-      background-color: #0d2542e7;
-      position: relative;
-      border: solid 2px #f7f7f7c9;
-      border-radius: 6px;
-      width: 100%;
-      height: auto; }
-      .projects__item__content::after {
-        content: "";
-        display: table;
-        clear: both; }
-    .projects__item__title {
-      color: #0d2542e7;
-      font-size: 3rem;
-      font-weight: bold;
-      background-color: #f7f7f7c9;
-      position: relative;
-      text-align: center; }
-    .projects__item__image-container {
-      float: left;
-      height: 32rem;
-      width: 25rem;
-      margin-right: 3rem;
-      margin-bottom: 1px; }
-    .projects__item__image {
-      width: 100%;
-      height: 100%;
-      margin: 0; }
-    .projects__item__summary {
-      margin: 1rem;
-      font-size: 2rem;
-      color: #fff; }
+  align-items: center;
+  justify-content: center; }
+
+.projects__item {
+  display: flex;
+  width: 60rem;
+  position: relative;
+  z-index: 1000;
+  transition: all .3s ease-in; }
+  .projects__item__title {
+    color: #0d2542e7;
+    font-size: 3rem;
+    font-weight: bold;
+    visibility: hidden;
+    background-color: #f7f7f7c9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3000; }
+  .projects__item__image {
+    width: 100%; }
+  .projects__item__summary {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    color: #fff;
+    position: absolute; }
+  .projects__item:hover {
+    transform: scale(1.1);
+    z-index: 2000; }
+  .projects__item:hover > .projects__item__modal {
+    visibility: visible; }
+  .projects__item:hover > .projects__item__title {
+    visibility: visible; }
+  .projects__item:hover > .projects__item__image {
+    filter: blur(4px); }
+  .projects__item__modal {
+    visibility: hidden;
+    position: absolute;
+    width: 60rem;
+    bottom: 0;
+    height: 15rem;
+    background-color: rgba(119, 119, 119, 0.8); }
 
 @media (max-width: 1400px) {
   .projects__item {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    position: relative; }
     .projects__item__summary {
       font-size: 1.5rem; }
     .projects__item__title {
-      font-size: 2rem; }
+      position: absolute;
+      bottom: 0;
+      z-index: 3000; }
     .projects__item__image-container {
       height: 24rem;
       width: 17rem;

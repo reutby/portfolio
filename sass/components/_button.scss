@@ -74,7 +74,7 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    transition: all .5s;
+    transition: transform background-color color .5s;
     display: inline-block;
     &--position1 {
         position: absolute;

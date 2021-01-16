@@ -32,6 +32,7 @@
         & p{
             margin-bottom:0;
         }
+        border-radius: 5px;
         position: relative;
         width: 100%;
         background-color: $color-white;
@@ -50,19 +51,19 @@
         }
         &--60{
             &:hover{
-                background-image: linear-gradient(to left, transparent 0%,transparent 40%,rgba($color-green-light,.8) 40%);
+                background-image: linear-gradient(to left, transparent 0%,transparent 40%,rgba($color-green-light,.8) 50%);
             }
         }
         &--70{
             &:hover{
-                background-image: linear-gradient(to left, transparent 0%,transparent 30%,rgba($color-green-light,.8) 30%);
+                background-image: linear-gradient(to left, transparent 0%,transparent 30%,rgba($color-green-light,.8) 40%);
             }
         }
 
         &--80{
             &:hover{
                 
-                background-image: linear-gradient(to left, transparent 0%,transparent 20%,rgba($color-green-light,.8) 20%);
+                background-image: linear-gradient(to left, transparent 0%,transparent 20%,rgba($color-green-light,.8) 30%);
                 
             }
         }
@@ -70,7 +71,7 @@
         &--90{
             &:hover{
                 
-                background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 10%);
+                background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 20%);
                
             }
         }
