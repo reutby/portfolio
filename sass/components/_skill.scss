@@ -2,8 +2,13 @@
 
     &__group{
         margin: 0 auto;
-        width: 55rem;
-       
+        width: 65rem;
+        @media (max-width:900px){
+            width: 55rem;
+        }
+        @media(max-width: 600px){
+            width: 35rem;
+        }
     }
 
     &__list{
@@ -19,9 +24,12 @@
     }
 
     &__item{
-        width: 50rem;
+        width: 60rem;
         display: flex;
         flex-direction: row;
+        @media(max-width: 900px){
+            width: 50rem;
+        }
         @media(max-width: 600px){
             width: 30rem;
         }
@@ -76,7 +84,9 @@
             }
         }
         
-
+        @media (max-width:600px){
+            display: block;
+        }
     }
 
     &__experience{
@@ -87,6 +97,9 @@
         color:$color-white;
         & p{
             margin-bottom:0;
+        }
+        @media (max-width:600px){
+            padding-top: 4rem;
         }
 
     }
@@ -99,6 +112,8 @@
         right: 1rem;
         @media(max-width: 600px){
             float: none;
+            display: block;
+            position: relative;
         }
         // height: auto;
        
@@ -110,6 +125,8 @@
         font-size: 3rem;
         @media(max-width: 600px){
             float: none;
+            display: block;
+            text-align: center;
         }
     }
 }
