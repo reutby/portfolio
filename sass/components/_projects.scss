@@ -16,6 +16,9 @@
         position: relative;
         align-items: center;
         justify-content: center;
+        @media(max-width:900px){
+            flex-direction: column;
+        }
 
     }
     &__item {
@@ -24,6 +27,7 @@
         position: relative;
         z-index: 1000;
         transition: all .3s ease-in;
+        
         &__title {
             color: $color-primary-blue;
             font-size: 3rem;
@@ -44,6 +48,8 @@
         &__summary {
             font-size: 1.8rem;
             margin-left: 1rem;
+            margin-right: 1rem;
+            padding:0 2rem 1rem 1rem;
             color: $color-white;
             position: absolute;
             // width: 10rem;
@@ -73,83 +79,36 @@
             background-color: rgba($color-grey-dark, .8);
         }
 
-    }
-}
-
-@media(max-width:1400px) {
-    .projects {
-
-        &__item {
-            margin-bottom: 2rem;
-            position: relative;
-
-            //    margin: 2rem auto;
-            &__summary {
-                font-size: 1.5rem;
-            }
-
+        @media(max-width:1200px){
+            width: 45rem;
             &__title {
-                position: absolute;
-                bottom: 0;
-                z-index: 3000;
+                font-size: 2.5rem;
             }
-
-            &__image-container {
-
-                height: 24rem;
-                width: 17rem;
-                margin-right: 3rem;
-                margin-bottom: 1px;
-            }
-
-        }
-
-    }
-}
-
-@media(max-width:1000px) {
-    .projects {
-        &__item {
-            margin-bottom: 2rem;
-            width: 80%;
-            position: block;
-            float: none;
-            margin: 2rem auto;
-
-            //    margin: 2rem auto;
-            &__summary {
+            &__summary{
                 font-size: 1.5rem;
             }
+            &__modal{
+                width: 45rem;
+                height: 12rem;
+            }
+        }
 
+        @media(max-width:600px){
+            width: 35rem;
+            &__title {
+                font-size: 2rem;
 
+            }
+            &__summary{
+                font-size: 1rem;
+            }
+            &__modal{
+                width: 35rem;
+                height: 9.5rem;
+            }
         }
 
     }
 }
 
-@media(max-width:600px) {
-    .projects {
-        &__item {
-            margin-bottom: 2rem;
-            width: 80%;
-            position: block;
-            float: none;
-            margin: 2rem auto;
-
-            //    margin: 2rem auto;
-            &__summary {
-                font-size: 1.2rem;
-            }
-
-            &__image-container {
-                // float:none;
-                height: 20rem;
-                width: 13rem;
-                margin-right: 3rem;
-                margin-bottom: 1px;
-            }
-
-        }
-
-    }
-}
+  
