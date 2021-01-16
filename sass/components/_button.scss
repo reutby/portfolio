@@ -76,16 +76,12 @@
     text-align: center;
     transition: transform background-color color .5s;
     display: inline-block;
+    
     &--position1 {
         position: absolute;
         bottom: 0;
         right: 1rem;
     }
-
-    // &--position2 {
-    //     @include absCenter;
-    // }
-
 
     &:link,
     &:visited {
@@ -106,5 +102,10 @@
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
         color: $color-white;
         background-color: $color-green-light;
+    }
+    @media (max-width:1200px){
+        font-size: 1.3rem;
+        margin-bottom: .5rem;
+        right: .5rem;
     }
 }

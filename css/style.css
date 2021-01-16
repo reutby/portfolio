@@ -18,6 +18,9 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
 .u-margin-top-big {
   margin-top: 8rem; }
 
@@ -325,6 +328,9 @@ body {
 .navigation-animation {
   animation: moveTopToBottom 2s; }
 
+.active {
+  color: #fff !important; }
+
 @media (max-width: 700px) {
   .navigation__list {
     opacity: 0;
@@ -461,6 +467,11 @@ body {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: #fff;
     background-color: #73c233; }
+  @media (max-width: 1200px) {
+    .button-secondary {
+      font-size: 1.3rem;
+      margin-bottom: .5rem;
+      right: .5rem; } }
 
 .profile-img {
   width: 25rem;
@@ -482,7 +493,13 @@ body {
 
 .skill__group {
   margin: 0 auto;
-  width: 55rem; }
+  width: 65rem; }
+  @media (max-width: 900px) {
+    .skill__group {
+      width: 55rem; } }
+  @media (max-width: 600px) {
+    .skill__group {
+      width: 35rem; } }
 
 .skill__list {
   list-style: none;
@@ -495,9 +512,12 @@ body {
   box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.8); }
 
 .skill__item {
-  width: 50rem;
+  width: 60rem;
   display: flex;
   flex-direction: row; }
+  @media (max-width: 900px) {
+    .skill__item {
+      width: 50rem; } }
   @media (max-width: 600px) {
     .skill__item {
       width: 30rem; } }
@@ -530,6 +550,9 @@ body {
     background-image: linear-gradient(to left, transparent 0%, transparent 20%, rgba(115, 194, 51, 0.8) 30%); }
   .skill__content--90:hover {
     background-image: linear-gradient(to left, transparent 0%, transparent 10%, rgba(115, 194, 51, 0.8) 20%); }
+  @media (max-width: 600px) {
+    .skill__content {
+      display: block; } }
 
 .skill__experience {
   font-size: 2rem;
@@ -539,6 +562,9 @@ body {
   color: #fff; }
   .skill__experience p {
     margin-bottom: 0; }
+  @media (max-width: 600px) {
+    .skill__experience {
+      padding-top: 4rem; } }
 
 .skill__text {
   font-size: 2rem;
@@ -548,7 +574,9 @@ body {
   right: 1rem; }
   @media (max-width: 600px) {
     .skill__text {
-      float: none; } }
+      float: none;
+      display: block;
+      position: relative; } }
 
 .skill__images {
   float: left;
@@ -556,7 +584,9 @@ body {
   font-size: 3rem; }
   @media (max-width: 600px) {
     .skill__images {
-      float: none; } }
+      float: none;
+      display: block;
+      text-align: center; } }
 
 .projects__list {
   display: flex;
@@ -573,6 +603,9 @@ body {
   position: relative;
   align-items: center;
   justify-content: center; }
+  @media (max-width: 900px) {
+    .projects__group {
+      flex-direction: column; } }
 
 .projects__item {
   display: flex;
@@ -596,6 +629,8 @@ body {
   .projects__item__summary {
     font-size: 1.8rem;
     margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0 2rem 1rem 1rem;
     color: #fff;
     position: absolute; }
   .projects__item:hover {
@@ -614,47 +649,26 @@ body {
     bottom: 0;
     height: 15rem;
     background-color: rgba(119, 119, 119, 0.8); }
-
-@media (max-width: 1400px) {
-  .projects__item {
-    margin-bottom: 2rem;
-    position: relative; }
-    .projects__item__summary {
-      font-size: 1.5rem; }
-    .projects__item__title {
-      position: absolute;
-      bottom: 0;
-      z-index: 3000; }
-    .projects__item__image-container {
-      height: 24rem;
-      width: 17rem;
-      margin-right: 3rem;
-      margin-bottom: 1px; } }
-
-@media (max-width: 1000px) {
-  .projects__item {
-    margin-bottom: 2rem;
-    width: 80%;
-    position: block;
-    float: none;
-    margin: 2rem auto; }
-    .projects__item__summary {
-      font-size: 1.5rem; } }
-
-@media (max-width: 600px) {
-  .projects__item {
-    margin-bottom: 2rem;
-    width: 80%;
-    position: block;
-    float: none;
-    margin: 2rem auto; }
-    .projects__item__summary {
-      font-size: 1.2rem; }
-    .projects__item__image-container {
-      height: 20rem;
-      width: 13rem;
-      margin-right: 3rem;
-      margin-bottom: 1px; } }
+  @media (max-width: 1200px) {
+    .projects__item {
+      width: 45rem; }
+      .projects__item__title {
+        font-size: 2.5rem; }
+      .projects__item__summary {
+        font-size: 1.5rem; }
+      .projects__item__modal {
+        width: 45rem;
+        height: 12rem; } }
+  @media (max-width: 600px) {
+    .projects__item {
+      width: 35rem; }
+      .projects__item__title {
+        font-size: 2rem; }
+      .projects__item__summary {
+        font-size: 1rem; }
+      .projects__item__modal {
+        width: 35rem;
+        height: 9.5rem; } }
 
 .contact-form__content {
   width: 40rem;

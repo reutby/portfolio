@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="section-home">
         <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
                 <source src="assets/img/header-bg.mp4" type="video/mp4" />
@@ -54,10 +54,11 @@
                 <span class="navigation__icon">&nbsp;</span>
             </label>
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#section-about" class="navigation__link">About</a></li>
-                <li class="navigation__item"><a href="#section-skills" class="navigation__link">Skills</a></li>
-                <li class="navigation__item"><a href="#section-projects" class="navigation__link">Projects</a></li>
-                <li class="navigation__item"><a href="#section-contact-me" class="navigation__link">Contact</a></li>
+                <li class="navigation__item" dest = "home" ><a href="#section-home"  class="navigation__link ">Home</a></li>
+                <li class="navigation__item" dest = "about" ><a href="#section-about"  class="navigation__link ">About</a></li>
+                <li class="navigation__item" dest = "skills"><a href="#section-skills"  class="navigation__link ">Skills</a></li>
+                <li class="navigation__item" dest= "projects"> <a href="#section-projects" class="navigation__link ">Projects</a></li>
+                <li class="navigation__item" dest="contact"><a href="#section-contact-me" class="navigation__link">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -110,7 +111,7 @@ color: rgb(130, 214, 62);
         <h2 class="secondary-heading u-margin-top-big"> Skills</h2>
         <div class="skill">
             <div class="skill__group">
-                <h3 class="heading-tertiary  u-margin-top-medium "> Front-end technologies</h3>
+                <h3 class="heading-tertiary  u-margin-top-medium u-margin-bottom-medium "> Front-end technologies</h3>
                 <ul class="skill__list">
                     <li class="skill__item">
                         <div class="skill__content skill__content--90">
@@ -181,7 +182,7 @@ color: rgb(130, 214, 62);
 
             </div>
             <div class="skill__group">
-                <h3 class="heading-tertiary  u-margin-top-medium "> Back-end technologies</h3>
+                <h3 class="heading-tertiary  u-margin-top-big u-margin-bottom-medium "> Back-end technologies</h3>
                 <ul class="skill__list">
 
                     <li class="skill__item">
@@ -236,7 +237,7 @@ color: rgb(130, 214, 62);
                 </ul>
             </div>
             <div class="skill__group">
-                <h3 class="heading-tertiary  u-margin-top-medium "> Languages</h3>
+                <h3 class="heading-tertiary  u-margin-top-big u-margin-bottom-medium"> Languages</h3>
                 <ul class="skill__list">
                     <li class="skill__item">
                         <div class="skill__content skill__content--80">
@@ -346,8 +347,8 @@ color: rgb(130, 214, 62);
                         <div class="projects__item__modal">
                             <p class="projects__item__summary">
                                 <span class="summary-header">Summary:</span> A SPA - Netflix clone.
-                                Technologies: React, Context API, FirebaseDB & Auth, Compound Component design pattern,
-                                style-Component.
+                                Technologies: React, Context API, FirebaseDB & Auth.
+                                Compound Component design pattern & styled-Component.
                             </p>
                             <a href="https://netflix-clone-69fb7.web.app/"
                                 class="button-secondary button-secondary--position1">go to
@@ -415,7 +416,7 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section class="section-contact-me">
+    <section id = "section-contact-me" class="section-contact-me">
         <h2 class="secondary-heading u-margin-top-big"> Contact Me</h2>
         <h3 class="heading-tertiary">Have a question or want to work together?</h3>
         <form action="https://formspree.io/f/xknpkazq" method="POST" id="contact-form" class="contact-form">
