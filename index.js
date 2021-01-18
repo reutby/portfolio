@@ -13,23 +13,9 @@ $(function () {
 
   }
 
-  var $animation_elements_left = $('.enter-from-left');
-  var $animation_elements_right = $('.enter-from-right');
-  var $animation_elements_fill_in_60 = $("div[class*='skill__fill-in--60']");
-  var $animation_elements_fill_in_70 = $("div[class*='skill__fill-in--70']");
-  var $animation_elements_fill_in_80 = $("div[class*='skill__fill-in--80']");
-  var $animation_elements_fill_in_90 = $("div[class*='skill__fill-in--90']");
   var $window = $(window);
  
-  $window.on('scroll', () => {
-    check_view($animation_elements_fill_in_70, is_in_view, "u-fill-in-animation u-fill-in-animation--70");
-    check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80");
-    check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90");
-    check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60");
-    check_view($animation_elements_left, is_in_view, "u-animate-left-to-right");
-    //bug need to figure out why the scrolling at projects section stuck
-    //  check_view($animation_elements_right, is_in_view, "u-animate-right-to-left");
-    
+  $window.on('scroll', ()=>{
     // // NAV POSITION
     var navPos = $('.navigation').position().top;
     var lastPos = 0;
@@ -38,7 +24,7 @@ $(function () {
     var pos = $(window).scrollTop();
     var pos2 = pos + 50;
 
-    if (!isMobile) {
+     
       if (pos >= navPos + $('.navigation').height() && lastPos < pos) {
         $('.navigation').addClass('fixed-position navigation-animation');
       }
@@ -46,7 +32,7 @@ $(function () {
         $('.navigation').removeClass('fixed-position navigation-animation');
       }
       lastPos = pos;
-    }
+    
 
 
     // Link Highlighting
@@ -75,7 +61,32 @@ $(function () {
     lockTimer = setTimeout(function () {
       $('body').removeClass('disable-hover');
     }, 500);
+  })
 
+
+  var $animation_elements_left = $('.enter-from-left');
+  var $animation_elements_right = $('.enter-from-right');
+  var $animation_elements_fill_in_60 = $("div[class*='skill__fill-in--60']");
+  var $animation_elements_fill_in_70 = $("div[class*='skill__fill-in--70']");
+  var $animation_elements_fill_in_80 = $("div[class*='skill__fill-in--80']");
+  var $animation_elements_fill_in_90 = $("div[class*='skill__fill-in--90']");
+  
+
+  $window.on('scroll', () => {
+    check_view($animation_elements_fill_in_70, is_in_view, "u-fill-in-animation u-fill-in-animation--70");
+    check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80");
+    check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90");
+    check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60");
+
+  });
+
+  //bug - 
+  // $window.on('scroll',()=>{
+  //   check_view($animation_elements_right, is_in_view, "u-animate-right-to-left");
+    
+  // });
+  $window.on('scroll', ()=>{
+    check_view($animation_elements_left, is_in_view, "u-animate-left-to-right");
   });
 
 
