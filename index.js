@@ -15,16 +15,15 @@ $(function () {
 
   var $window = $(window);
  
+  var navPos = $('.navigation').position().top;
+  var lastPos = 0;
+  var lockTimer;
   $window.on('scroll', ()=>{
     // // NAV POSITION
-    var navPos = $('.navigation').position().top;
-    var lastPos = 0;
-    var lockTimer;
 
     var pos = $(window).scrollTop();
     var pos2 = pos + 50;
 
-     
       if (pos >= navPos + $('.navigation').height() && lastPos < pos) {
         $('.navigation').addClass('fixed-position navigation-animation');
       }
@@ -34,7 +33,7 @@ $(function () {
       lastPos = pos;
     
 
-
+      
     // Link Highlighting
     if (pos2 > $('#section-home').offset().top) {
       highlightLink('home');
@@ -52,15 +51,15 @@ $(function () {
       highlightLink('contact');
     }
 
-    // prevent hover on scroll
-    clearTimeout(lockTimer);
-    if (!$('body').hasClass('u-disable-hover')) {
-      $('body').addClass('u-disable-hover');
-    }
+    // // prevent hover on scroll
+    // clearTimeout(lockTimer);
+    // if (!$('body').hasClass('u-disable-hover')) {
+    //   $('body').addClass('u-disable-hover');
+    // }
 
-    lockTimer = setTimeout(function () {
-      $('body').removeClass('disable-hover');
-    }, 500);
+    // lockTimer = setTimeout(function () {
+    //   $('body').removeClass('disable-hover');
+    // }, 500);
   })
 
 
