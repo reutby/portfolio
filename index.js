@@ -7,18 +7,21 @@
 $(function () {
   //
   var isMobile;
+  
   if (/Android|webOS|Pixel2|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     isMobile = true;
-  }
   
+  }
+
   var $animation_elements_left = $('.enter-from-left');
   var $animation_elements_right = $('.enter-from-right');
   var $animation_elements_fill_in_60 = $("div[class*='skill__fill-in--60']");
   var $animation_elements_fill_in_70 = $("div[class*='skill__fill-in--70']");
   var $animation_elements_fill_in_80 = $("div[class*='skill__fill-in--80']");
   var $animation_elements_fill_in_90 = $("div[class*='skill__fill-in--90']");
-  
   var $window = $(window);
+
+
   $window.on('scroll', () => { check_view($animation_elements_left, is_in_view, "u-animate-left-to-right") });
   $window.on('scroll', () => { check_view($animation_elements_right, is_in_view, "u-animate-right-to-left") });
   $window.on('scroll', () => { check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60") });
@@ -26,16 +29,11 @@ $(function () {
   $window.on('scroll', () => { check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80") });
   $window.on('scroll', () => { check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90") });
 
-  //mobile hover behivor
 
-  if (isMobile) {
-
-  }
   // NAV POSITION
   var navPos = $('.navigation').position().top;
   var lastPos = 0;
   var lockTimer;
-  var isMobile = false;
 
   $(window).on('scroll', function () {
     var pos = $(window).scrollTop();
@@ -70,11 +68,11 @@ $(function () {
 
     //prevent hover on scroll
     clearTimeout(lockTimer);
-    if (!$('body').hasClass('disable-hover')) {
-      $('body').addClass('disable-hover');
+    if (!$('body').hasClass('u-disable-hover')) {
+      $('body').addClass('u-disable-hover');
     }
 
-    lockTimer = setTimeout(function() {
+    lockTimer = setTimeout(function () {
       $('body').removeClass('disable-hover');
     }, 500);
 
