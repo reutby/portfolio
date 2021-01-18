@@ -12,24 +12,69 @@
     }
 }
 
-@keyframes percentageAnimation{
+@keyframes percentageAnimation60{
     0% {
         
-        background-image: linear-gradient(to left, transparent 0%,transparent 100%,rgba($color-green-light,.8) 100%);
-       
+        width: 0%;
     }
     
     100% {
-        
-        background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 10%);
-        
+        width: 60%;    
     }
 }
+
+@keyframes percentageAnimation70{
+    0% {
+        
+        width: 0%;
+    }
+    
+    100% {
+        width: 70%;    
+    }
+}
+
+@keyframes percentageAnimation80{
+    0% {
+        
+        width: 0%;
+    }
+    
+    100% {
+        width: 80%;    
+    }
+}
+
+@keyframes percentageAnimation90{
+    0% {
+        
+        width: 0%;
+    }
+    
+    100% {
+        width: 90%;    
+    }
+}
+
 @keyframes moveInsideFromLeft {
 
     0% {
         opacity: 0;
         transform: translateX(-100%);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInsideFromRight {
+
+    0% {
+        opacity: 0;
+        transform: translateX(120%);
     }
 
 

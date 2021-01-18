@@ -6,18 +6,35 @@
 
 $(function () {
   //
-
-
-  var $animation_elements = $('.u-hide-me');
-
+  var isMobile;
+  if (/Android|webOS|Pixel2|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    isMobile = true;
+  }
+  
+  var $animation_elements_left = $('.enter-from-left');
+  var $animation_elements_right = $('.enter-from-right');
+  var $animation_elements_fill_in_60 = $("div[class*='skill__fill-in--60']");
+  var $animation_elements_fill_in_70 = $("div[class*='skill__fill-in--70']");
+  var $animation_elements_fill_in_80 = $("div[class*='skill__fill-in--80']");
+  var $animation_elements_fill_in_90 = $("div[class*='skill__fill-in--90']");
+  
   var $window = $(window);
-  $window.on('scroll', () => { check_view($animation_elements, is_in_view, "u-in-view") });
+  $window.on('scroll', () => { check_view($animation_elements_left, is_in_view, "u-animate-left-to-right") });
+  $window.on('scroll', () => { check_view($animation_elements_right, is_in_view, "u-animate-right-to-left") });
+  $window.on('scroll', () => { check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60") });
+  $window.on('scroll', () => { check_view($animation_elements_fill_in_70, is_in_view, "u-fill-in-animation u-fill-in-animation--70") });
+  $window.on('scroll', () => { check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80") });
+  $window.on('scroll', () => { check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90") });
 
+  //mobile hover behivor
 
+  if (isMobile) {
+
+  }
   // NAV POSITION
   var navPos = $('.navigation').position().top;
   var lastPos = 0;
-
+  var lockTimer;
   var isMobile = false;
 
   $(window).on('scroll', function () {
@@ -51,11 +68,15 @@ $(function () {
       highlightLink('contact');
     }
 
+    //prevent hover on scroll
+    clearTimeout(lockTimer);
+    if (!$('body').hasClass('disable-hover')) {
+      $('body').addClass('disable-hover');
+    }
 
-    //   lockTimer = setTimeout(function() {
-    //     $('body').removeClass('disable-hover');
-    //   }, 500);
-    // });
+    lockTimer = setTimeout(function() {
+      $('body').removeClass('disable-hover');
+    }, 500);
 
   });
   function highlightLink(anchor) {
@@ -94,6 +115,7 @@ $(function () {
     if ((element_bottom_position >= window_top_position) &&
       (element_top_position <= window_bottom_position)) {
       $element.addClass(element_class);
+
     } else {
       $element.removeClass(element_class);
     }

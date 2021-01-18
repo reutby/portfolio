@@ -50,7 +50,8 @@
     .section-about{
         height: auto;
         &__content{
-
+            // margin: 0 1rem;
+            width: 80%;
             transform: skew(0deg);
         }
         &__text {

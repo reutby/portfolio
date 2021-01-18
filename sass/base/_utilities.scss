@@ -74,18 +74,26 @@
 .u-font-size-small {
     font-size: 2rem;
     text-align: center;
+    @media(max-width:700px){
+        font-size: 1rem;
+    }
 
 }
 
 .u-font-size-medium {
     font-size: 3rem;
     text-align: center;
+    @media(max-width:700px){
+        font-size: 2rem;
+    }
 }
 
 .u-font-size-big {
     font-size: 4rem;
     text-align: center;
-
+    @media(max-width:700px){
+        font-size: 3rem;
+    }
 }
 
 
@@ -96,15 +104,43 @@
 .u-under-line{
     text-decoration: underline;
 }
-.u-hide-me{
-    opacity: 0;
-}
+// .u-hide-me{
+//     opacity: 0;
+// }
 
-.u-in-view{
-    opacity: 1;
-}
+// .u-in-view{
+//     opacity: 1;
+// }
 
 .u-display-hidden{
     position: absolute;
     visibility: hidden;
+}
+
+//animation
+
+.u-animate-left-to-right{
+    animation:moveInsideFromLeft 1.2s;
+}
+
+.u-animate-right-to-left{
+    animation:moveInsideFromRight 1.2s;
+}
+
+.u-fill-in-animation{
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    &--60{
+        animation:percentageAnimation60 2s;
+    }
+    &--70{
+        animation:percentageAnimation70 2s;
+    }
+    &--80{
+        animation:percentageAnimation80 2s;
+    }
+    &--90{
+        animation:percentageAnimation90 2s;
+    }
+
 }

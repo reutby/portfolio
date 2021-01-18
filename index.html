@@ -48,21 +48,25 @@
         </div>
     </header>
     <div class="navigation flex-position">
-        <div class="navigation__nav">
+        <nav class="navigation__nav">
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
             <label for="navi-toggle" class="navigation__button">
                 <span class="navigation__icon">&nbsp;</span>
             </label>
             <ul class="navigation__list">
-                <li class="navigation__item" dest = "home" ><a href="#section-home"  class="navigation__link ">Home</a></li>
-                <li class="navigation__item" dest = "about" ><a href="#section-about"  class="navigation__link ">About</a></li>
-                <li class="navigation__item" dest = "skills"><a href="#section-skills"  class="navigation__link ">Skills</a></li>
-                <li class="navigation__item" dest= "projects"> <a href="#section-projects" class="navigation__link ">Projects</a></li>
-                <li class="navigation__item" dest="contact"><a href="#section-contact-me" class="navigation__link">Contact</a></li>
+                <li class="navigation__item" dest="home"><a href="#section-home" class="navigation__link ">Home</a></li>
+                <li class="navigation__item" dest="about"><a href="#section-about" class="navigation__link ">About</a>
+                </li>
+                <li class="navigation__item" dest="skills"><a href="#section-skills"
+                        class="navigation__link ">Skills</a></li>
+                <li class="navigation__item" dest="projects"> <a href="#section-projects"
+                        class="navigation__link ">Projects</a></li>
+                <li class="navigation__item" dest="contact"><a href="#section-contact-me"
+                        class="navigation__link">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
-    <section class="section-about u-hide-me" id="section-about">
+    <section class="section-about enter-from-left" id="section-about">
 
 
         <div class="section-about__content u-box-shadow u-skew-10deg-left">
@@ -106,7 +110,7 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section class="section-skills u-hide-me" id="section-skills">
+    <section class="section-skills enter-from-right" id="section-skills">
 
         <h2 class="secondary-heading u-margin-top-big"> Skills</h2>
         <div class="skill">
@@ -114,7 +118,9 @@ color: rgb(130, 214, 62);
                 <h3 class="heading-tertiary  u-margin-top-medium u-margin-bottom-medium "> Front-end technologies</h3>
                 <ul class="skill__list">
                     <li class="skill__item">
-                        <div class="skill__content skill__content--90">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--90">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify u-font-size-big" data-icon="logos:html-5"
                                     data-inline="false"></span>
@@ -137,11 +143,13 @@ color: rgb(130, 214, 62);
                     </li>
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--80">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--80">
+                            </div>
                             <div class="skill__images">
-                                <span class="iconify u-font-size-small" data-icon="logos:jquery"
+                                <span class="iconify u-font-size-medium" data-icon="logos:jquery"
                                     data-inline="false"></span>
-                                <span class="iconify u-font-size-small" data-icon="logos:bootstrap"
+                                <span class="iconify u-font-size-medium" data-icon="logos:bootstrap"
                                     data-inline="false"></span>
 
                             </div>
@@ -157,7 +165,9 @@ color: rgb(130, 214, 62);
                     </li>
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--90">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--90">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify u-font-size-big" data-icon="logos:redux"
                                     data-inline="false"></span>
@@ -169,6 +179,7 @@ color: rgb(130, 214, 62);
                             <div class="skill__text">
                                 <p>React, Redux & Firebase</p>
                             </div>
+
 
                         </div>
                         <div class="skill__experience">
@@ -186,7 +197,9 @@ color: rgb(130, 214, 62);
                 <ul class="skill__list">
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--70">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--70">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify" data-icon="logos:nodejs" data-inline="false"></span>
                                 <span class="iconify" data-icon="logos:express" data-inline="false"></span>
@@ -194,6 +207,7 @@ color: rgb(130, 214, 62);
                             <div class="skill__text">
                                 <p>Node.js & Express</p>
                             </div>
+
 
                         </div>
                         <div class="skill__experience">
@@ -203,13 +217,17 @@ color: rgb(130, 214, 62);
                     </li>
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--60">
+                        <div class="skill__content ">
+                            <div class="skill__fill-in skill__fill-in--60">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify" data-icon="logos:mongodb" data-inline="false"></span>
                             </div>
                             <div class="skill__text">
                                 <p>mongoDB & mongoos</p>
                             </div>
+
+
                         </div>
                         <div class="skill__experience">
                             <p>60%</p>
@@ -218,7 +236,10 @@ color: rgb(130, 214, 62);
                     </li>
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--60">
+                        <div class="skill__content ">
+                            <div class="skill__fill-in skill__fill-in--60">
+                            </div>
+
                             <div class="skill__images">
                                 <span class="iconify" data-icon="dashicons:rest-api" data-inline="false"></span>
                                 <span class="iconify" data-icon="logos:passport" data-inline="false"></span>
@@ -226,6 +247,7 @@ color: rgb(130, 214, 62);
                             <div class="skill__text">
                                 <p>Rest API & Passport.js</p>
                             </div>
+
 
                         </div>
                         <div class="skill__experience">
@@ -240,13 +262,17 @@ color: rgb(130, 214, 62);
                 <h3 class="heading-tertiary  u-margin-top-big u-margin-bottom-medium"> Languages</h3>
                 <ul class="skill__list">
                     <li class="skill__item">
-                        <div class="skill__content skill__content--80">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--80">
+                            </div>
+
                             <div class="skill__images">
                                 <span class="iconify" data-icon="logos:javascript" data-inline="false"></span>
                             </div>
                             <div class="skill__text">
                                 <p>Javascript </p>
                             </div>
+
 
                         </div>
                         <div class="skill__experience ">
@@ -256,7 +282,9 @@ color: rgb(130, 214, 62);
                     </li>
 
                     <li class="skill__item">
-                        <div class="skill__content skill__content--90">
+                        <div class="skill__content ">
+                            <div class="skill__fill-in skill__fill-in--90">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify u-font-size-big" data-icon="teenyicons:c-solid"
                                     data-inline="false"></span>
@@ -267,6 +295,8 @@ color: rgb(130, 214, 62);
                                 <p>C / C++</p>
                             </div>
 
+
+
                         </div>
                         <div class="skill__experience">
                             <p>90%</p>
@@ -274,7 +304,9 @@ color: rgb(130, 214, 62);
 
                     </li>
                     <li class="skill__item">
-                        <div class="skill__content skill__content--60">
+                        <div class="skill__content">
+                            <div class="skill__fill-in skill__fill-in--60">
+                            </div>
                             <div class="skill__images">
                                 <span class="iconify u-font-size-big" data-icon="logos:python"
                                     data-inline="false"></span>
@@ -282,6 +314,7 @@ color: rgb(130, 214, 62);
                             <div class="skill__text">
                                 <p>Python</p>
                             </div>
+
 
                         </div>
                         <div class="skill__experience ">
@@ -313,13 +346,13 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section class="section-projects u-hide-me" id="section-projects">
+    <section class="section-projects enter-from-left" id="section-projects">
 
         <div class="projects">
             <h2 class="secondary-heading u-margin-top-big"> Projects</h2>
             <ul class="projects__list">
                 <li class="projects__group">
-                    <div class="projects__item">
+                    <div class="projects__item" id="project1">
                         <h3 class="projects__item__title">Burger Builder</h3>
                         <div class="projects__item__image ">
                             <img src="assets/img/burger-builder.png" alt="burger-builder-project"
@@ -339,8 +372,8 @@ color: rgb(130, 214, 62);
 
                     </div>
 
-                    <div class="projects__item">
-                        <h3 class="projects__item__title">Netflix Clone</h3>
+                    <div class="projects__item" id="project2">
+                        <h3 class="projects__item__title ">Netflix Clone</h3>
                         <div class="projects__item__image ">
                             <img src="assets/img/netflix-clone.png" alt="netflix-project" class="projects__item__image">
                         </div>
@@ -359,7 +392,7 @@ color: rgb(130, 214, 62);
 
 
                 <li class="projects__group">
-                    <div class="projects__item">
+                    <div class="projects__item " id="project3">
                         <h3 class="projects__item__title">Natours</h3>
                         <div class="projects__item__image ">
                             <img src="assets/img/natours.png" alt="burger-builder-project"
@@ -380,7 +413,7 @@ color: rgb(130, 214, 62);
                     </div>
 
                     <div class="projects__item">
-                        <h3 class="projects__item__title">Portfolio</h3>
+                        <h3 class="projects__item__title" id="project4">Portfolio</h3>
                         <div class="projects__item__image ">
                             <img src="assets/img/portfolio.png" alt="portfolio" class="projects__item__image">
                         </div>
@@ -416,7 +449,7 @@ color: rgb(130, 214, 62);
   margin: 0 auto;
   margin-bottom: 2rem;
   ">
-    <section id = "section-contact-me" class="section-contact-me">
+    <section id="section-contact-me" class="section-contact-me enter-from-right">
         <h2 class="secondary-heading u-margin-top-big"> Contact Me</h2>
         <h3 class="heading-tertiary">Have a question or want to work together?</h3>
         <form action="https://formspree.io/f/xknpkazq" method="POST" id="contact-form" class="contact-form">

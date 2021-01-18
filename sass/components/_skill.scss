@@ -1,129 +1,151 @@
-.skill{
+.skill {
 
-    &__group{
+    &__group {
         margin: 0 auto;
         width: 65rem;
-        @media (max-width:900px){
+
+        @media (max-width:900px) {
             width: 55rem;
         }
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             width: 35rem;
         }
     }
 
-    &__list{
+    &__list {
         list-style: none;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding:2rem ;
+        padding: 2rem;
         background-color: $color-primary-blue;
         border-radius: 5px;
-        box-shadow: 0rem 1rem 2rem rgba($color-black,.8);
-           
+        box-shadow: 0rem 1rem 2rem rgba($color-black, .8);
+
     }
 
-    &__item{
+    &__item {
         width: 60rem;
         display: flex;
         flex-direction: row;
-        @media(max-width: 900px){
+
+        @media(max-width: 900px) {
             width: 50rem;
         }
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             width: 30rem;
         }
     }
-    &__content{
+
+    &__content {
 
         display: flex;
-        & p{
-            margin-bottom:0;
+
+        & p {
+            margin-bottom: 0;
         }
+        
+        overflow: hidden;
+        height: 7rem;
         border-radius: 5px;
         position: relative;
-        width: 100%;
         background-color: $color-white;
-        background-image: linear-gradient(to left, transparent 0%,transparent 100%,rgba($color-green-light,.8) 100%);
+        width: 100%;
         text-align: center;
+        
         padding: 1rem;
-        transition: all .3s;
+        transition: width .5s 2s;
         @include clearfix;
-        &:not(:last-child){
+
+        &:not(:last-child) {
             margin-bottom: 1rem;
         }
-        &:hover{
-        //    animation:percentageAnimation .8s;
+
+
+        &:hover {
+            //    animation:percentageAnimation .8s;
             transform: scale(1.1);
 
         }
-        &--60{
-            &:hover{
-                background-image: linear-gradient(to left, transparent 0%,transparent 40%,rgba($color-green-light,.8) 50%);
-            }
-        }
-        &--70{
-            &:hover{
-                background-image: linear-gradient(to left, transparent 0%,transparent 30%,rgba($color-green-light,.8) 40%);
-            }
-        }
 
-        &--80{
-            &:hover{
-                
-                background-image: linear-gradient(to left, transparent 0%,transparent 20%,rgba($color-green-light,.8) 30%);
-                
-            }
-        }
-
-        &--90{
-            &:hover{
-                
-                background-image: linear-gradient(to left, transparent 0%,transparent 10%,rgba($color-green-light,.8) 20%);
-               
-            }
-        }
-        
-        @media (max-width:600px){
+        @media (max-width:600px) {
             display: block;
+            height: 14rem;
         }
     }
 
-    &__experience{
+    &__fill-in {
+        top: 0;
+        left: 0;
+        position: absolute;
+        height: inherit;
+        background-color: $color-green-light;
+        &--60 {
+            width: 60%;
+      
+        }
+        
+        &--70 {
+            width: 70%;
+           
+        }
+        
+        &--80 {
+            width: 80%;
+        
+        }
+        
+        &--90 {
+            width: 90%;
+            
+        }
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        
+    }
+
+    &__experience {
         font-size: 2rem;
         display: flex;
         padding-left: 2rem;
-        padding-top:2rem ;
-        color:$color-white;
-        & p{
-            margin-bottom:0;
+        padding-top: 2rem;
+        color: $color-white;
+
+        & p {
+            margin-bottom: 0;
         }
-        @media (max-width:600px){
+
+        @media (max-width:600px) {
             padding-top: 4rem;
         }
 
     }
 
-    &__text{
+    &__text {
         font-size: 2rem;
-        padding-top:1rem ;
+        padding-top: 1rem;
         display: inline-block;
         position: absolute;
         right: 1rem;
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             float: none;
             display: block;
             position: relative;
         }
+
         // height: auto;
-       
+
     }
 
-    &__images{
+    &__images {
         float: left;
         margin-right: 1rem;
         font-size: 3rem;
-        @media(max-width: 600px){
+
+        @media(max-width: 600px) {
             float: none;
             display: block;
             text-align: center;

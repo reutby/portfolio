@@ -6,9 +6,11 @@
         list-style: none;
         width: auto;
         margin: 2rem auto;
+        padding-left:0 ;
         align-items: center;
         justify-content: center;
-        
+
+        padding: 2rem;
     }
     &__group{
         display: flex;
@@ -23,11 +25,14 @@
     }
     &__item {
         display: flex;
-        width: 60rem;
+        flex-direction: column;
+        width: 50rem;
         position: relative;
         z-index: 1000;
         transition: all .3s ease-in;
-        
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow:  0rem 2rem 2rem rgba($color-black,.6);
         &__title {
             color: $color-primary-blue;
             font-size: 3rem;
@@ -44,6 +49,15 @@
 
 
         }
+        &__modal {
+            visibility: hidden;
+            position: absolute;
+            width: 50rem;
+            bottom: 0;
+            height: 13rem;
+            background-color: rgba($color-grey-dark, .8);
+            
+        }
 
         &__summary {
             font-size: 1.8rem;
@@ -52,7 +66,6 @@
             padding:0 2rem 1rem 1rem;
             color: $color-white;
             position: absolute;
-            // width: 10rem;
 
         }
         &:hover{
@@ -70,17 +83,10 @@
         &:hover > &__image{
             filter: blur(4px);
         }
-        &__modal {
-            visibility: hidden;
-            position: absolute;
-            width: 60rem;
-            bottom: 0;
-            height: 15rem;
-            background-color: rgba($color-grey-dark, .8);
-        }
+        
 
         @media(max-width:1200px){
-            width: 45rem;
+            width: 40rem;
             &__title {
                 font-size: 2.5rem;
             }
@@ -88,13 +94,14 @@
                 font-size: 1.5rem;
             }
             &__modal{
-                width: 45rem;
-                height: 12rem;
+                width: 40rem;
+                height: 11rem;
             }
         }
 
-        @media(max-width:600px){
+        @media(max-width:700px){
             width: 35rem;
+            margin: 1rem;
             &__title {
                 font-size: 2rem;
 
@@ -103,6 +110,8 @@
                 font-size: 1rem;
             }
             &__modal{
+                position: relative;
+                visibility: visible;
                 width: 35rem;
                 height: 9.5rem;
             }
