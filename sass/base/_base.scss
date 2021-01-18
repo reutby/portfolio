@@ -15,4 +15,6 @@ html {
 body {
     box-sizing: border-box;
     background-color: rgba($color-black,.80);
+    overflow-y: auto;
+    overflow-x: hidden;
 }

@@ -120,30 +120,36 @@
 //animation
 
 .u-animate-left-to-right{
-    animation:moveInsideFromLeft 1.2s;
+    animation:moveInsideFromLeft .8s;
 }
 
 .u-animate-right-to-left{
-    animation:moveInsideFromRight 1.2s;
+    animation:moveInsideFromRight .5s;
 }
 
-// .u-disable-hover{
-//     pointer-events: none;
-// }
+.u-disable-hover{
+    pointer-events: none;
+}
 .u-fill-in-animation{
-    animation-fill-mode: both;
-    animation-timing-function: linear;
     &--60{
         animation:percentageAnimation60 2s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
     }
     &--70{
         animation:percentageAnimation70 2s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
     }
     &--80{
         animation:percentageAnimation80 2s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
     }
     &--90{
         animation:percentageAnimation90 2s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
     }
 
 }

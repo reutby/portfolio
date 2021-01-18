@@ -7,10 +7,10 @@
 $(function () {
   //
   var isMobile;
-  
+
   if (/Android|webOS|Pixel2|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     isMobile = true;
-  
+
   }
 
   var $animation_elements_left = $('.enter-from-left');
@@ -20,24 +20,24 @@ $(function () {
   var $animation_elements_fill_in_80 = $("div[class*='skill__fill-in--80']");
   var $animation_elements_fill_in_90 = $("div[class*='skill__fill-in--90']");
   var $window = $(window);
+ 
+  $window.on('scroll', () => {
+    check_view($animation_elements_fill_in_70, is_in_view, "u-fill-in-animation u-fill-in-animation--70");
+    check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80");
+    check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90");
+    check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60");
+    check_view($animation_elements_left, is_in_view, "u-animate-left-to-right");
+    //bug need to figure out why the scrolling at projects section stuck
+    //  check_view($animation_elements_right, is_in_view, "u-animate-right-to-left");
+    
+    // // NAV POSITION
+    var navPos = $('.navigation').position().top;
+    var lastPos = 0;
+    var lockTimer;
 
-
-  $window.on('scroll', () => { check_view($animation_elements_left, is_in_view, "u-animate-left-to-right") });
-  $window.on('scroll', () => { check_view($animation_elements_right, is_in_view, "u-animate-right-to-left") });
-  $window.on('scroll', () => { check_view($animation_elements_fill_in_60, is_in_view, "u-fill-in-animation u-fill-in-animation--60") });
-  $window.on('scroll', () => { check_view($animation_elements_fill_in_70, is_in_view, "u-fill-in-animation u-fill-in-animation--70") });
-  $window.on('scroll', () => { check_view($animation_elements_fill_in_80, is_in_view, "u-fill-in-animation u-fill-in-animation--80") });
-  $window.on('scroll', () => { check_view($animation_elements_fill_in_90, is_in_view, "u-fill-in-animation u-fill-in-animation--90") });
-
-
-  // NAV POSITION
-  var navPos = $('.navigation').position().top;
-  var lastPos = 0;
-  var lockTimer;
-
-  $(window).on('scroll', function () {
     var pos = $(window).scrollTop();
     var pos2 = pos + 50;
+
     if (!isMobile) {
       if (pos >= navPos + $('.navigation').height() && lastPos < pos) {
         $('.navigation').addClass('fixed-position navigation-animation');
@@ -66,7 +66,7 @@ $(function () {
       highlightLink('contact');
     }
 
-    //prevent hover on scroll
+    // prevent hover on scroll
     clearTimeout(lockTimer);
     if (!$('body').hasClass('u-disable-hover')) {
       $('body').addClass('u-disable-hover');
@@ -77,13 +77,6 @@ $(function () {
     }, 500);
 
   });
-  function highlightLink(anchor) {
-    $('ul .active').removeClass('active');
-    $('ul')
-      .find('[dest="' + anchor + '"]')
-      .children().addClass('active');
-  }
-
 
 
   //CONTACT FORM
@@ -107,6 +100,17 @@ $(function () {
 
     });
   });
+
+
+  function highlightLink(anchor) {
+    $('ul .active').removeClass('active');
+    $('ul')
+      .find('[dest="' + anchor + '"]')
+      .children().addClass('active');
+  }
+
+
+
 
 
   function is_in_view($element, element_class, element_bottom_position, window_top_position, element_top_position, window_bottom_position) {
@@ -133,5 +137,7 @@ $(function () {
       callback($element, element_class, element_bottom_position, window_top_position, element_top_position, window_bottom_position);
     });
   }
+}
+);
 
-});
+

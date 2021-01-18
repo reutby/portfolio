@@ -1,6 +1,7 @@
 .projects {
 
     &__list {
+        height: auto;
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -34,7 +35,7 @@
         z-index: 1000;
         transition: all .3s ease-in;
         border-radius: 5px;
-        overflow: hidden;
+        // overflow: hidden;
         box-shadow: 0rem 2rem 2rem rgba($color-black, .6);
 
         &__title {
@@ -77,6 +78,7 @@
         @media (hover: hover) and (pointer: fine) {
             &:hover {
                 transform: scale(1.1);
+                background-color: red;
                 z-index: 2000;
             }
 
