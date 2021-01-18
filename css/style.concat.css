@@ -456,7 +456,9 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 .u-center-text {
   text-align: center !important; }
@@ -544,22 +546,33 @@ body {
   visibility: hidden; }
 
 .u-animate-left-to-right {
-  animation: moveInsideFromLeft 1.2s; }
+  animation: moveInsideFromLeft .8s; }
 
 .u-animate-right-to-left {
-  animation: moveInsideFromRight 1.2s; }
+  animation: moveInsideFromRight .5s; }
 
-.u-fill-in-animation {
+.u-disable-hover {
+  pointer-events: none; }
+
+.u-fill-in-animation--60 {
+  animation: percentageAnimation60 2s;
   animation-fill-mode: both;
   animation-timing-function: linear; }
-  .u-fill-in-animation--60 {
-    animation: percentageAnimation60 2s; }
-  .u-fill-in-animation--70 {
-    animation: percentageAnimation70 2s; }
-  .u-fill-in-animation--80 {
-    animation: percentageAnimation80 2s; }
-  .u-fill-in-animation--90 {
-    animation: percentageAnimation90 2s; }
+
+.u-fill-in-animation--70 {
+  animation: percentageAnimation70 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear; }
+
+.u-fill-in-animation--80 {
+  animation: percentageAnimation80 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear; }
+
+.u-fill-in-animation--90 {
+  animation: percentageAnimation90 2s;
+  animation-fill-mode: both;
+  animation-timing-function: linear; }
 
 @keyframes moveInCenter {
   0% {
@@ -688,6 +701,7 @@ body {
     font-size: 3rem; }
   .heading-tertiary {
     font-size: 2rem;
+    padding: 1rem;
     text-align: center;
     text-transform: uppercase; }
   .summary-header {
@@ -725,7 +739,7 @@ body {
   background-color: #000, 0.8;
   position: relative;
   height: auto;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   transition: all 3s ease-in; }
 
 .section-projects {
@@ -1099,6 +1113,7 @@ body {
       text-align: center; } }
 
 .projects__list {
+  height: auto;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -1127,7 +1142,6 @@ body {
   z-index: 1000;
   transition: all .3s ease-in;
   border-radius: 5px;
-  overflow: hidden;
   box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.6); }
   .projects__item__title {
     color: #0d2542e7;
@@ -1159,6 +1173,7 @@ body {
   @media (hover: hover) and (pointer: fine) {
     .projects__item:hover {
       transform: scale(1.1);
+      background-color: red;
       z-index: 2000; }
     .projects__item:hover > .projects__item__modal {
       visibility: visible; }
@@ -1231,7 +1246,8 @@ body {
 
 @media (max-width: 900px) {
   .contact-form__content {
-    width: 30rem; } }
+    width: 30rem;
+    margin-top: 6rem; } }
 
 .social-network__list {
   list-style: none;
