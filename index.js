@@ -92,12 +92,14 @@ $(function () {
   //CONTACT FORM
   $("#contact-form").on('submit', (e) => {
     e.preventDefault();
-
-    $.ajax({
+    const message = 'Name : ' + $('#name').val() + ' Mail: ' + $('#email').val() + ' Message: ' + $('#message').val();
+     $.ajax({
+      contentType:'application/x-www-form-urlencoded',
+      userAgent:'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.60 Safari/537.1',
       url: 'https://formspree.io/f/xknpkazq',
       method: 'POST',
-      data: { message: ($('form').serialize()) },
-      dataType: 'json'
+      data: { message:message },
+      dataType:'json'
     }).done(function (res) {
       $('#success-message').addClass('message-visible');
 
