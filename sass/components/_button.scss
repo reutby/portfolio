@@ -1,22 +1,21 @@
-.btn {
+.btn-about-me {
+    border: 2px solid $color-white;
     animation:moveInCenter .4s 1.6s;
     animation-fill-mode: both;
-    left: 25%;
-    width:50%;
-    border: 2px solid $color-white;
-    transition: all .5s;
-    text-decoration: none;
+    color: $color-white;
     font-size: 3rem;
     font-weight: 700;
-    color: $color-white;
-
+    left: 25%;
+   
+    transition: all .5s;
+    text-decoration: none;
     text-align: center;
     padding: 1rem;
     margin: 0 auto;
     text-transform: uppercase;
- 
     position: relative;
-    display: inline-block;
+    width:50%;
+    
     & .arrow-down {
         opacity: 0;
         display: none;

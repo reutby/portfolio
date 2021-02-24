@@ -466,42 +466,41 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.btn {
+.btn-about-me {
+  border: 2px solid #fff;
   animation: moveInCenter .4s 1.6s;
   animation-fill-mode: both;
-  left: 25%;
-  width: 50%;
-  border: 2px solid #fff;
-  transition: all .5s;
-  text-decoration: none;
+  color: #fff;
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  left: 25%;
+  transition: all .5s;
+  text-decoration: none;
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
   text-transform: uppercase;
   position: relative;
-  display: inline-block; }
-  .btn .arrow-down {
+  width: 50%; }
+  .btn-about-me .arrow-down {
     opacity: 0;
     display: none;
     visibility: hidden; }
-  .btn:hover {
+  .btn-about-me:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:active, .btn:focus {
+  .btn-about-me:active, .btn-about-me:focus {
     outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  .btn:active, .btn:hover {
+  .btn-about-me:active, .btn-about-me:hover {
     background-color: #fff;
     color: #73c233; }
-    .btn:active .arrow-right, .btn:hover .arrow-right {
+    .btn-about-me:active .arrow-right, .btn-about-me:hover .arrow-right {
       opacity: 0;
       display: none;
       visibility: hidden; }
-    .btn:active .arrow-down, .btn:hover .arrow-down {
+    .btn-about-me:active .arrow-down, .btn-about-me:hover .arrow-down {
       visibility: visible;
       display: inline;
       opacity: 1; }
