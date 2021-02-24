@@ -1110,6 +1110,10 @@ body {
       display: block;
       text-align: center; } }
 
+.work-in-progress {
+  color: #FF5471;
+  background-color: #595959; }
+
 .projects__list {
   height: auto;
   display: flex;
@@ -1162,7 +1166,7 @@ body {
     height: 13rem;
     background-color: rgba(119, 119, 119, 0.8); }
   .projects__item__summary {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 0 2rem 1rem 1rem;
