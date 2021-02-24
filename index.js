@@ -4,7 +4,7 @@
 
 
 
-$(function () {
+$(()=> {
   //
   var isMobile;
 
@@ -129,10 +129,7 @@ $(function () {
     if ((element_bottom_position >= window_top_position) &&
       (element_top_position <= window_bottom_position)) {
       $element.addClass(element_class);
-
-    } else {
-      $element.removeClass(element_class);
-    }
+      }
   }
   function check_view($element_target, callback, element_class) {
     var window_height = $window.height();
@@ -149,6 +146,10 @@ $(function () {
       callback($element, element_class, element_bottom_position, window_top_position, element_top_position, window_bottom_position);
     });
   }
+
+  $("#about-me-button").on('click',()=>{
+    $("#section-about").get(0).scrollIntoView();
+  })
 }
 );
 

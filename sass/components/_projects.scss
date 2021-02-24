@@ -77,8 +77,7 @@
 
         @media (hover: hover) and (pointer: fine) {
             &:hover {
-                transform: scale(1.1);
-                background-color: red;
+                transform: scale(1.05);
                 z-index: 2000;
             }
 
