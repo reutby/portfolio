@@ -471,23 +471,22 @@ body {
   animation-fill-mode: both;
   left: 25%;
   width: 50%;
-  border: 2px solid #fff; }
+  border: 2px solid #fff;
+  transition: all .5s;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 auto;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block; }
   .btn .arrow-down {
     opacity: 0;
     display: none;
     visibility: hidden; }
-  .btn:link, .btn:visited {
-    transition: all .5s;
-    text-decoration: none;
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    margin: 0 auto;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block; }
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -726,8 +725,7 @@ body {
     position: absolute; }
   @media (hover: hover) and (pointer: fine) {
     .projects__item:hover {
-      transform: scale(1.1);
-      background-color: red;
+      transform: scale(1.05);
       z-index: 2000; }
     .projects__item:hover > .projects__item__modal {
       visibility: visible; }
