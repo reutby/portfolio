@@ -1,3 +1,7 @@
+.work-in-progress{
+    color:#FF5471;
+    background-color: #595959;
+}
 .projects {
 
     &__list {
@@ -66,7 +70,7 @@
         }
 
         &__summary {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-left: 1rem;
             margin-right: 1rem;
             padding: 0 2rem 1rem 1rem;
