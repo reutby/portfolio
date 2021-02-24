@@ -150,6 +150,7 @@ $(()=> {
   $("#about-me-button").on('click',()=>{
     $("#section-about").get(0).scrollIntoView();
   })
+
 }
 );
 

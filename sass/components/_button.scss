@@ -3,12 +3,11 @@
     animation:moveInCenter .4s 1.6s;
     animation-fill-mode: both;
     color: $color-white;
+    background-color: transparent;
     font-size: 3rem;
     font-weight: 700;
     left: 25%;
-   
     transition: all .5s;
-    text-decoration: none;
     text-align: center;
     padding: 1rem;
     margin: 0 auto;

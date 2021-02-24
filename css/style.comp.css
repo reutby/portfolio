@@ -196,11 +196,12 @@ body {
   background-color: #fff;
   margin: 1rem;
   opacity: 0.8;
-  font-size: 5rem;
+  font-size: 4.5rem;
   text-align: center;
   letter-spacing: 1rem;
   padding: 1rem;
-  font-family: 'Black Han Sans', sans-serif; }
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400; }
   .heading-primary__animation {
     animation: moveInCenter .8s;
     animation-fill-mode: both; }
@@ -248,7 +249,7 @@ body {
 
 @media (max-width: 1000px) {
   .heading-primary {
-    font-size: 3rem; }
+    font-size: 2.5rem; }
   .paragraph {
     font-size: 1.7rem; }
   .secondary-heading {
@@ -471,11 +472,11 @@ body {
   animation: moveInCenter .4s 1.6s;
   animation-fill-mode: both;
   color: #fff;
+  background-color: transparent;
   font-size: 3rem;
   font-weight: 700;
   left: 25%;
   transition: all .5s;
-  text-decoration: none;
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
